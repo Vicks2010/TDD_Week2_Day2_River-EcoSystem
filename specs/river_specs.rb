@@ -16,7 +16,7 @@ def test_fish_count()
 end
 
 def test_lose_fish()
-  fish_count -= 1
+  fish_count.pop
   assert_equal(2, @river.number_of_fish())
 
 end
