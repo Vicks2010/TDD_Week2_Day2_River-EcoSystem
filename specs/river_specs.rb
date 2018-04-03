@@ -10,9 +10,14 @@ def setup()
 
 end
 
-def test_fish_count
+def test_fish_count()
   assert_equal(3, @river.number_of_fish)
 
 end
 
+def test_lose_fish()
+  fish_count -= 1
+  assert_equal(2, @river.number_of_fish())
+
+end
 end
