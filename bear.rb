@@ -11,4 +11,7 @@ def take_fish
   return @stomach << "fish"
 end
 
+def food_count
+  return @stomach.count()
+end
 end
