@@ -2,17 +2,17 @@ require("minitest/autorun")
 require("minitest/rg")
 
 require_relative("../river.rb")
+require_relative("../bear.rb")
 
 class RiverTest < MiniTest::Test
 def setup()
+  bear = Bear.new("Yogi")
   fish_count = ["fish", "fish", "fish"]
-  @river = River.new("Clyde", fish_count)
-
+  @river = River.new("Clyde", fish_count, bear)
 end
 
 def test_fish_count()
   assert_equal(3, @river.number_of_fish())
-
 end
 
 def test_lose_fish()
@@ -20,9 +20,6 @@ def test_lose_fish()
 end
 
 def test_fish_taken_by_bear
-bear_eats_fish =[]
-  fish_ = @fish_count - @fish_take
-
+assert_equal(["fish"], @river.bear_eat_fish)
 end
-
 end
