@@ -20,6 +20,7 @@ def test_lose_fish()
 end
 
 def test_fish_taken_by_bear
-assert_equal(["fish"], @river.bear_eat_fish)
+assert_equal(["fish"], @river.bear_eats_fish)
+assert_equal(2, @river.number_of_fish)
 end
 end
